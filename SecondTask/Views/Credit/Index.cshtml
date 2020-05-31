@@ -1,0 +1,23 @@
+﻿@model IEnumerable<SecondTask.Models.BankUser>
+
+<table class="table">
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Email</td>
+                <td>@item.Amount</td>
+                <td>
+                    <a 
+                       asp-controller="Credit"
+                       asp-action="Ask" 
+                       asp-route-Id="@item.Id">
+                    Ask credit</a>
+                </td>
+                <td></td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+﻿@model SecondTask.Models.ViewModel.InfoViewModel
+
+
+<h1>    Total  @Model.Total  </h1>
+<h1>    Debit  @Model.Debit </h1>
+<h1>    Credit  -  @Model.Credit </h1>
+
+
+
+<h2>Creditor</h2>
+<table class="table">
+
+    <tbody>
+        @foreach (var item in Model.Creditor)
+        {
+            <tr>
+                <td>@item.Creditor.Email </td>
+                <td>@item.Debitor.Email </td>
+                <td>@item.BankUserTransaction.Amount </td>
+                <td>@item.BankUserTransaction.Time </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<h2>Debitor</h2>
+<table class="table">
+
+    <tbody>
+        @foreach (var item in Model.Debitor)
+        {
+            <tr>
+                <td>@item.Creditor.Email </td>
+                <td>@item.Debitor.Email </td>
+                <td>@item.BankUserTransaction.Amount </td>
+                <td>@item.BankUserTransaction.Time </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
